@@ -1,5 +1,7 @@
-# UTV-Eng-beamer-template
+# DAFN_Containers
 
-Beamer presentation template for University of Rome "Tor Vergata", Engineering faculty.
+DAFN - Containers lecture.
 
-Compatible with Overleaf, natively supports the [`LaTeX-env`](https://github.com/IntelligentSystemsLabUTV/LaTeX-env) offline LaTeX development environment, based on Docker and Visual Studio Code.
+LaTeX source code and build files.
+
+The document can be found in [`build/main.pdf`](build/main.pdf).
