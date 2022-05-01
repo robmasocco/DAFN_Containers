@@ -5,3 +5,56 @@
 % ### Containers ###
 \section{Containers}
 \graphicspath{{figs/section1/}}
+
+% --- Why containers? ---
+\begin{frame}{Why containers?}
+\begin{exampleblock}{Example: Packaging Applications}
+  Suppose you are ready to distribute your new application:
+  \begin{itemize}
+    \item you need to be sure that it is compatible with all the \textbf{platforms} you chose to support;
+    \item you need to figure out a way to deal with \textbf{dependencies};
+    \item you want to publish some kind of self-contained, easily-identifiable \textbf{package}.
+  \end{itemize}
+\end{exampleblock}
+\end{frame}
+\begin{frame}{Why containers?}
+\begin{exampleblock}{Example: Isolating Applications}
+  Suppose you are deploying applications on a server:
+  \begin{itemize}
+    \item you want to define \textbf{resource quotas} and \textbf{permissions} for each;
+    \item you want to be sure that each module has what it needs to operate, but \textbf{nothing more};
+    \item you want to \textbf{isolate} each module for security reasons, in case something goes wrong.
+  \end{itemize}
+\end{exampleblock}
+\end{frame}
+\begin{frame}{Why containers?}
+\begin{exampleblock}{Example: Replicating Environments}
+  Suppose you are developing applications for a specific system (maybe with a different architecture):
+  \begin{itemize}
+    \item you want to have a \textbf{local copy} of such system without carrying one with you;
+    \item you want to have all \textbf{libraries} and \textbf{dependencies} installed without tainting your own system;
+    \item you would like to \textbf{deploy} the entire installation with just a few commands, without running any script but simply copying data.
+  \end{itemize}
+\end{exampleblock}
+\end{frame}
+\begin{frame}{Why containers?}
+\begin{columns}
+  \column{.5\textwidth}
+  A possible solution to many of the previous situations could be a set of \textbg{virtual machines}.\\
+  However, virtual machines are \textbg{slow}, hypervisors take up \textbg{system resources} and guest kernels must always be \textbg{tweaked}.\\
+  In each of the above scenarios something simpler would be enough, especially since \textbg{the OS is not involved}, only applications are.\\
+  This is what a \textbg{container} is.
+
+  \column{.5\textwidth}
+  \begin{figure}
+    \centering
+    \includegraphics[scale=.7]{freebsdjail.png}
+    \label{fig:jail}
+    \caption{FreeBSD jail logo}
+  \end{figure}
+\end{columns}
+\end{frame}
+
+% --- Containers and the Linux kernel ---
+\begin{frame}{Containers and the Linux kernel}
+\end{frame}
