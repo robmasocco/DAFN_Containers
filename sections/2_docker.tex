@@ -41,3 +41,46 @@ Containers can be of help in some classic scenarios:
   \item working with \textbg{multiple architectures} at the same time: Docker fully supports \href{https://www.qemu.org/}{\color{blue}\textbf{\underline{QEMU}}} to build and run containers.
 \end{itemize}
 \end{frame}
+
+% --- Building a Docker Container ---
+\begin{frame}{Building a Docker Container}
+\begin{enumerate}
+  \item A \textbg{Dockerfile} specifies a set of rules to build an \textbg{image}, just like a script.
+  \item \textbg{Images} are the binary archives from which a \textbg{container} can be started: they can be stored, pulled or simply built locally.
+  \item A \textbg{container} can be built from an image and then started, stopped and managed by the Docker daemon.
+\end{enumerate}
+Images are built \textbg{incrementally}: each Dockerfile directive defines a new \textbg{layer}, and the Docker engine stores the differences between each build step thanks to filesystem capabilities: this allows to efficiently \textbg{cache build stages}.
+\end{frame}
+
+% --- Dockerfiles ---
+\begin{frame}[fragile]{Dockerfiles}
+\begin{columns}\column{.9\textwidth}
+\begin{lstlisting}[language=Dockerfile, caption=Minimal example of a Dockerfile running an Ubuntu image in a container]
+ARG VERSION=20.04
+FROM ubuntu:$VERSION # Note the tag!
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    git && \
+    rm -rf /tmp/*
+
+ENV DEBIAN_FRONTEND=dialog
+LABEL maintainer.name="Roberto Masocco"
+CMD ["bash"]
+\end{lstlisting}
+\end{columns}
+\end{frame}
+\begin{frame}{Dockerfile commands}
+Just to name a few:
+\begin{itemize}
+  \item \texttt{FROM repository/image:tag}\\Specifies a base image to pull.
+  \item \texttt{RUN command}\\Runs the following command in a new shell inside the container.
+  \item \texttt{COPY source target}\\Copies a file into the container.
+  \item \texttt{ENV variable=value}\\Sets an environment variable inside the container.
+  \item \texttt{ARG name=value}\\Declares a build argument.
+  \item \texttt{CMD ["command", "arg1", ...]}\\Specifies the command to run when the container is started.
+\end{itemize}
+\end{frame}
