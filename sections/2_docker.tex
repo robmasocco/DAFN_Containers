@@ -84,3 +84,24 @@ Just to name a few (see the \href{https://docs.docker.com/engine/reference/build
   \item \texttt{CMD ["command", "arg1", ...]}\\Specifies the command to run when the container is started.
 \end{itemize}
 \end{frame}
+
+% --- Docker Commands ---
+\begin{frame}{Docker Commands}
+Again, just a few (each with a gazillion of options):
+\begin{itemize}
+  \item \texttt{docker build}\\Builds a new image from a Dockerfile.
+  \item \texttt{docker run}\\Builds and starts a container.
+  \item \texttt{docker ps}\\Lists active containers.
+  \item \texttt{docker exec}\\Runs a command inside a container (e.g. a shell).
+  \item \texttt{docker start}\\Starts a container.
+\end{itemize}
+\end{frame}
+\begin{frame}{Docker Commands}
+\begin{itemize}
+  \item \texttt{docker stop}\\Stops a container.
+  \item \texttt{docker images}\\Lists available images.
+  \item \texttt{docker rm}\\Removes a container.
+  \item \texttt{docker rmi}\\Removes an image.
+\end{itemize}
+Active containers are usually referenced by their \textbg{ID}.
+\end{frame}
