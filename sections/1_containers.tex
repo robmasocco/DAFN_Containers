@@ -57,4 +57,29 @@
 
 % --- Containers in the Linux kernel ---
 \begin{frame}{Containers in the Linux kernel}
+\begin{columns}
+  \column{.5\textwidth}
+  Support for containers was added to the Linux kernel with a set of \textbg{features} starting from kernel 2.6 (2003), mainly:
+  \begin{itemize}
+    \item \textbg{control groups} (\texttt{cgroups}): defining different resource usage policies for groups of processes;
+    \item \textbg{namespaces}: isolating processes and users in different "realms", both hardware (e.g. network stack) and software (e.g. PIDs);
+    \item \textbg{capabilities}: defining what a process can do, with both hardware and software resources.
+  \end{itemize}
+
+  \column{.5\textwidth}
+  \begin{figure}
+    \centering
+    \includegraphics[scale=.2]{tux.png}
+    \label{fig:tux}
+    \caption{Tux}
+  \end{figure}
+\end{columns}
+\end{frame}
+\begin{frame}{Containers in the Linux kernel}
+\begin{figure}
+  \centering
+  \includegraphics[scale=.15]{pidNamespace.png}
+  \label{fig:pidnamespace}
+  \caption{Nested PID namespaces}
+\end{figure}
 \end{frame}
