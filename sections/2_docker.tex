@@ -48,6 +48,7 @@ Containers can be of help in some classic scenarios:
   \item A \textbg{Dockerfile} specifies a set of rules to build an \textbg{image}, just like a script.
   \item \textbg{Images} are the binary archives from which a \textbg{container} can be started: they can be stored, pulled or simply built locally.
   \item A \textbg{container} can be built from an image and then started, stopped and managed by the Docker daemon.
+  \item Processes started inside the container are subject to its limitations, e.g. \textbg{filesystem jails} prevent them to climb up to the hosts's filesystem.
 \end{enumerate}
 Images are built \textbg{incrementally}: each Dockerfile directive defines a new \textbg{layer}, and the Docker engine stores the differences between each build step thanks to filesystem capabilities: this allows to efficiently \textbg{cache build stages}.
 \end{frame}
