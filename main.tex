@@ -48,6 +48,11 @@
   morecomment=[l][\color{codegreen}]{\#},
   morekeywords={FROM, RUN, ADD, COPY, LABEL, ENV, ARG, CMD}
 }
+\lstdefinelanguage{compose}{
+  alsoletter={:, -, /},
+  morecomment=[l][\color{codegreen}]{\#},
+  morekeywords={services:, build:, context:, network_mode:, args:, environment:, command:, volumes:, -}
+}
 
 \usepackage{hyperref}
 

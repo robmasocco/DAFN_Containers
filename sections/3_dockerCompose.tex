@@ -26,3 +26,25 @@
   \end{figure}
 \end{columns}
 \end{frame}
+
+% --- Compose Files ---
+\begin{frame}[fragile]{Compose Files}
+\begin{columns}\column{.9\textwidth}
+\begin{lstlisting}[language=compose, caption=Minimal example of a Compose file]
+services:
+  development:
+    build:
+      context: .
+      args:
+        TARGET: dev
+    image: devenv:latest
+    environment:
+      TERM: xterm-256color
+    network_mode: host
+    command: ["/bin/zsh"]
+    volumes:
+      - ~/.ssh:/home/user/.ssh
+\end{lstlisting}
+\end{columns}
+Refer to the \href{https://docs.docker.com/compose/compose-file/}{\color{blue}\underline{Compose reference}} for more.
+\end{frame}
