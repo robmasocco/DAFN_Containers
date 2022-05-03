@@ -5,3 +5,24 @@
 % ### Docker Compose ###
 \section{Docker Compose}
 \graphicspath{{figs/section3/}}
+
+% --- Composing Services ---
+\begin{frame}{Composing Services}
+\begin{columns}
+  \column{.5\textwidth}
+  Managing multiple, interdependent \textbg{containerized services} can become quite a tedious task.\\
+  Each container may take multiple options, some have to be started in sequence or built in a particular way...\\
+  \begin{block}{}
+    \centering
+    \textbf{Compose} is a utility that helps to \textbf{build}, \textbf{run} and \textbf{manage} containers by parsing all such settings from \textbf{YAML configuration files}.
+  \end{block}
+
+  \column{.5\textwidth}
+  \begin{figure}
+    \centering
+    \includegraphics[scale=.2]{composeLogo.png}
+    \label{fig:compose}
+    \caption{Docker Compose logo}
+  \end{figure}
+\end{columns}
+\end{frame}
