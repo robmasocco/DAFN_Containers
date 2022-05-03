@@ -14,7 +14,7 @@
   Each container may take multiple options, some have to be started in sequence or built in a particular way...\\
   \begin{block}{}
     \centering
-    \textbf{Compose} is a utility that helps to \textbf{build}, \textbf{run} and \textbf{manage} containers by parsing all such settings from \textbf{YAML configuration files}.
+    \textbf{Compose} is a utility that helps to \textbf{build}, \textbf{run} and \textbf{manage} multiplatform containers by parsing all such settings from \textbf{YAML configuration files}.
   \end{block}
 
   \column{.5\textwidth}
@@ -47,4 +47,12 @@ services:
 \end{lstlisting}
 \end{columns}
 Refer to the \href{https://docs.docker.com/compose/compose-file/}{\color{blue}\underline{Compose reference}} for more.
+\end{frame}
+
+% --- Compose Commands ---
+\begin{frame}{Compose Commands}
+Pretty much the same that Docker has, but invoked with\\\vspace{2pt}
+\texttt{docker-compose}\\\vspace{2pt}
+and oriented only towards services specified in the local Compose file.\\
+Consult the \href{https://docs.docker.com/compose/reference/}{\color{blue}\underline{CLI reference}} for more info.
 \end{frame}
